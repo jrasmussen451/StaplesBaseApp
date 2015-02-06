@@ -142,7 +142,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="panel-footer">
+                <div class="panel-footer pull-right">
                     <div class="row">
                         <div class="col-md-4 col-lg-3">
                             <giftcardredemption ng-if="user.Permissions.contains('ViewPromotions')" />
@@ -164,34 +164,29 @@
 						<div class="pull-right">
 							<a class="btn btn-primary" href="catalog" ng-click="saveChanges()">Continue Shopping</a>
 						</div>
+					</div>	
 					<div class="row">
 					</div>
-					<div class="row">
-						<ul>
-							<li>
-								<button type="button" class="btn btn-danger pull-right" ng-click="currentOrder.Status == 'AwaitingApproval' ? cancelEdit() : cancelOrder()">
+					<div class="panel-footer">
+						<div class="col-sm-1 col-md-8 col-lg-12">
+							<div class="bs-example" data-example-id="btn-variants">
+								<button type="button" class="btn btn-danger" ng-click="currentOrder.Status == 'AwaitingApproval' ? cancelEdit() : cancelOrder()">
 									<small ng-if="currentOrder.Status != 'AwaitingApproval'">{{('Cancel' | r) + ' ' + ('Order' | r) | xlat}}</small>
 									<small ng-if="currentOrder.Status == 'AwaitingApproval'">{{('Cancel' | r) + ' ' + ('Edit' | r) | xlat}}</small>
 								</button>
-							</li>
-							<li>
-								<button type="submit" class="btn btn-primary pull-right" ng-click="saveChanges()">
+								<button type="submit" class="btn btn-primary" ng-click="saveChanges()">
 									<loadingindicator  ng-show="displayLoadingIndicator" />
 									<small>{{('Save' | r) + ' ' + ('Order' | r) | xlat}}</small>
 								</button>
-							</li>
-							<li>
-								<button type="button" class="btn pull-right" ng-class="{'btn-warning': cart.$invalid, 'btn-success': !cart.$invalid }" ng-click="checkOut()" ng-disabled="cart.$invalid">
+								<button type="button" class="btn" ng-class="{'btn-warning': cart.$invalid, 'btn-success': !cart.$invalid }" ng-click="checkOut()" ng-disabled="cart.$invalid">
 									<i ng-show="cart.$invalid" class="fa fa-warning"></i>
 									<span>{{'Check Out' | r | xlat}} {{window.outerWidth}}</span>
 								</button>
-							</li>
-						</ul>					
+							</div>
+						</div>
 					</div>
-
-					</div>
-                </div>
-            </div>
+				</div>
+			</div>
             <div class="navbar-fixed-bottom">
                 <div class="alert-warning text-center" style="padding: 10px;" ng-if="currentOrder.RepeatError">
                     {{'Some items were not added to your repeat order' | r | xlat}}: {{currentOrder.RepeatError}}
@@ -226,8 +221,6 @@
                         </li>
                     </ul>
                 </div>
-
-
             </div>
         </form>
     </div>

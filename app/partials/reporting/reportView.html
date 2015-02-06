@@ -20,7 +20,7 @@
                 </tab>
                 <tab disabled="!report.ID">
                     <tab-heading ng-click="downloadReport(report)">
-                        {{('Report' | r) + ' ' + ('Data' | r) | xlat}}
+                        {{('View / Download' | r) + ' ' + ('Report' | r) | xlat}}
                     </tab-heading>
                     <div class="panel-body">
                         <div class="table-responsive hidden-xs">
@@ -52,7 +52,7 @@
                 </tab>
             </tabset>
             <div class="view-response-message text-center" ng-show="actionMessage">
-                <p>{{actionMessage | r | xlat}}</p>
+                <p>Your changes have been saved <br/>Click on the <b>"View / Download Report"</b> tab for results</p>
             </div>
             <div class="view-error-message alert-danger text-center" ng-show="errorMessage">
                 <p>{{errorMessage | r | xlat}}</p>
