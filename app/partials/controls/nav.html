@@ -83,16 +83,16 @@
                                 <span>{{'Log Out' | r | xlat}}</span>
                             </a>
                         </li>
-						</li>
+					</li>
                 </ul>
                 <ul class="nav navbar-nav pull-right">
-                    <li class="cart" ng-class="{'active': isActive(['cart', 'checkout'])}">
-		    <li>{{currentOrder.Total | currency}}</li>
+					<li class="cart" ng-class="{'active': isActive(['cart', 'checkout'])}">
+						<li>{{currentOrder.Total | currency}}</li></br>
 						<a id="451qa_cart_link" ng-show="cartCount && user.CurrentOrderID" class="cart" href="cart">
-                            <span ng-bind="cartCount" class="badge"></span>
-                            <i class="fa fa-shopping-cart fa-lg"></i>
-                            <i class="fa fa-caret-down"></i>
-                        </a>
+							<span ng-bind="cartCount" class="badge"></span>
+							<i class="fa fa-shopping-cart fa-lg"></i>
+							<i class="fa fa-caret-down"></i>
+						</a>
                     </li>
                 </ul>
             </div>
