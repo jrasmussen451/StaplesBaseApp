@@ -32,7 +32,11 @@
                     {{item.TotalShipped}}
                 </p>
             </div>
-        </div>
+            <div class="col-xs-12 col-sm-4" ng-show='item.Variant.ProofUrl'>
+                    <small class="text-info">{{'View Proof' | r | xlat}}</small><br />
+                    <a href="{{item.Variant.ProofUrl}}" class="btn btn-default ng-binding" > View PDF </a>
+            </div>
+		</div>
         <div class="row">
             <div class="col-xs-6">
                 <p ng-if="item.CostCenter">
@@ -58,3 +62,4 @@
         </div>
     </div>
 </div>
+<script type="text/javascript" src="js/Cory.Four51OrderCloud.com.BaseAppBuildTest.productdisplayservices.js"></script>
